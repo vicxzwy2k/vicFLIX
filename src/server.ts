@@ -17,9 +17,11 @@ server.use(express.static(path.join(__dirname,'../public')))
 //usando mainRoutes (do index)
 server.use(mainRoutes)
 
-server.use((req,res)=>{
-    res.send("Pagina nao encontrada!")
+server.use((req,res) =>{
+    res.render('pages/404')
 })
+
+
 
 //acessando servidor
 server.listen(process.env.PORT)
